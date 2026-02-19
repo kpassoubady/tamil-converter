@@ -1,0 +1,2 @@
+pypdf
+open-tamil
