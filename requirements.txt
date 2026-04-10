@@ -1,2 +1,20 @@
+# Core dependencies (tamil-converter.py & pdf-2-markdown.py)
 pypdf
 open-tamil
+pytesseract
+pdf2image
+Pillow
+python-dotenv
+
+# Optional: LLM-based OCR cleanup (--fix flag in pdf-2-markdown.py)
+# Set GEMINI_API_KEY or ANTHROPIC_API_KEY in .env file
+# At least one of these is needed for --fix:
+google-genai     # Gemini (free tier available)
+anthropic        # Claude
+
+# Optional: Alternative OCR engines for testing (see tests/ and docs/ocr-comparison.md)
+# Uncomment the ones you want to try:
+# easyocr        # Note: Tamil model broken in v1.7.2 as of April 2026
+# paddleocr      # Requires: pip install paddleocr paddlepaddle
+# paddlepaddle
+# ocr-tamil      # Poor results on scanned books
